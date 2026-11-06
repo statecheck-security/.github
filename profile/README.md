@@ -6,13 +6,19 @@ Security and privacy engineering for Indian companies: VAPT, source code review,
 
 ## Open source
 
-- **[dpdpa-engineering-kit](https://github.com/statecheck-security/dpdpa-engineering-kit)**: tested code for India's Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025. Consent records, breach detection, encryption, data residency, CI/CD privacy gates, OPA policies and ISO 27001 / SOC 2 mappings, each tested in CI.
+| Tool | What it does | |
+|---|---|---|
+| **[dpdp-scan](https://github.com/statecheck-security/dpdp-scan)** | Finds Indian personal data (Aadhaar, PAN, GSTIN, UPI, IFSC, mobile) in code, schemas, fixtures and logs with real checksum validation, reads SQL, Prisma and OpenAPI schemas into a data inventory, and ships Semgrep rules for personal data in logs and analytics and for date-of-birth collection without an age gate. CLI, GitHub Action with SARIF, Docker image. Every finding masks its value. [On PyPI](https://pypi.org/project/dpdp-scan/). | [![stars](https://img.shields.io/github/stars/statecheck-security/dpdp-scan?style=flat&logo=github&label=stars)](https://github.com/statecheck-security/dpdp-scan) [![release](https://img.shields.io/github/v/release/statecheck-security/dpdp-scan?style=flat)](https://github.com/statecheck-security/dpdp-scan/releases) |
+| **[dvdpa](https://github.com/statecheck-security/dvdpa)** | A deliberately leaky KYC demo app with synthetic identifiers only: the target to point dpdp-scan at, and the repository to fork and break further. | [![stars](https://img.shields.io/github/stars/statecheck-security/dvdpa?style=flat&logo=github&label=stars)](https://github.com/statecheck-security/dvdpa) |
+| **[dpdpa-engineering-kit](https://github.com/statecheck-security/dpdpa-engineering-kit)** | Tested code for the DPDP Act, 2023 and the DPDP Rules, 2025: consent records, breach detection and notification, encryption, data residency, CI/CD privacy gates, OPA policies and ISO 27001 / SOC 2 / NIST mappings, each tested in CI. | [![stars](https://img.shields.io/github/stars/statecheck-security/dpdpa-engineering-kit?style=flat&logo=github&label=stars)](https://github.com/statecheck-security/dpdpa-engineering-kit) [![release](https://img.shields.io/github/v/release/statecheck-security/dpdpa-engineering-kit?style=flat)](https://github.com/statecheck-security/dpdpa-engineering-kit/releases) |
+| **[paranoid](https://github.com/theAstiv/paranoid)** | Self-hosted, iterative STRIDE + MAESTRO threat modelling with LLMs and a deterministic fallback, plus an npm dependency capability engine. Presented at Black Hat India Arsenal 2026 and VulnCon Arsenal 2026. Maintained by our founder under his own account. | [![stars](https://img.shields.io/github/stars/theAstiv/paranoid?style=flat&logo=github&label=stars)](https://github.com/theAstiv/paranoid) |
+
+All Apache 2.0. The code shows engineering patterns and reports what it finds; none of it gives a compliance verdict or legal advice.
 
 ## Free DPDPA resources
 
 - **[DPDPA checklist for small companies](https://statechecksecurity.com/dpdpa)**: what must be in place by 13 May 2027, with the section or Rule behind each item.
 - **[DPDP Gap Identifier](https://statechecksecurity.com/dpdpa/gap-identifier)**: a free check that shows which areas your company still has to fix.
+- **[DPDPA Website Check](https://statechecksecurity.com/scan)**: what a public site does before a visitor makes a choice, each finding with its section or Rule.
 - **[Breach intimation under Rule 7](https://statechecksecurity.com/dpdpa/breach-intimation)**: who you tell, what you say, and when.
 - **[Articles](https://statechecksecurity.com/blog)** on the engineering behind each obligation.
-
-The code and articles show engineering patterns, not legal advice.
